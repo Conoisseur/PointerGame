@@ -439,6 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1148543028}
   - component: {fileID: 1148543029}
+  - component: {fileID: 1148543030}
   m_Layer: 5
   m_Name: Pin Lock
   m_TagString: Untagged
@@ -491,6 +492,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1148543030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148543027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f871e8b17d57348839c129240912ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlockedPins: 01000000020000000300000004000000
+  pinPrefab: {fileID: 8553795964831414502, guid: c55f882b0e26af3439c39a06d20bff38, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
