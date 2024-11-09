@@ -1,16 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 /// <summary>
-/// Displays a game object's name to some text when clicked
-/// Intended to be attached to a manager object
+/// Displays a game object's name to a TextMeshProUGUI text element when clicked.
+/// Intended to be attached to a manager object.
 /// </summary>
-public class showInteractableInfoManager : MonoBehaviour
+public class ShowInteractableInfoManager : MonoBehaviour
 {
-    public Text dialogueText;
+    public TextMeshProUGUI dialogueText;
 
     void Update()
     {
@@ -20,7 +21,7 @@ public class showInteractableInfoManager : MonoBehaviour
 
             Collider2D hit = Physics2D.OverlapPoint(mousePosition);
 
-            if (hit)
+            if (hit != null)
             {
                 Debug.Log(hit);
                 dialogueText.text = hit.transform.name;

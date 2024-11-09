@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 /// <summary>
-/// Displays information about the object when it is clicked on
-/// Intended to be attached to object being clicked
-/// Requires a BoxCollider2D component to detect clicks on the object
+/// Displays information about the object when it is clicked on.
+/// Intended to be attached to the object being clicked.
+/// Requires a BoxCollider2D component to detect clicks on the object.
 /// </summary>
 [RequireComponent(typeof(BoxCollider2D))]
 public class ShowInteractableInfo : MonoBehaviour
 {
-    public Text dialogueText;
+    public TextMeshProUGUI dialogueText;
 
     private BoxCollider2D objectCollider;
 
