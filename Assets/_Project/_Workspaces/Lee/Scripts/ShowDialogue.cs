@@ -5,28 +5,27 @@ using UnityEngine;
 
 public class ShowDialogue : MonoBehaviour
 {
-    public string[] dialogues;
-    private int _dialogueIndex;
+    public DialogueSO dialogueSo;
+    
     public TextMeshProUGUI textDisplay;
     
-    private void DisplayTextByIndex(int index)
+    private void ShowText()
     {
+        string[] dialogues = dialogueSo.dialogues;
+        int index = dialogueSo.dialogueIndex;
+        
         if (index >= 0 && index < dialogues.Length)
         {
             textDisplay.text = dialogues[index];
         }
+        
+        if (index < dialogues.Length - 1) {
+            dialogueSo.dialogueIndex++;
+        }
         else
         {
-            Debug.LogWarning("Index out of range");
-            textDisplay.text = "Text not found";
+            dialogueSo.dialogueIndex = 0;
         }
     }
     
-    public void ShowText()
-    {
-        DisplayTextByIndex(_dialogueIndex );
-        if (_dialogueIndex < dialogues.Length - 1) {
-            _dialogueIndex++;
-        }
-    }
 }
