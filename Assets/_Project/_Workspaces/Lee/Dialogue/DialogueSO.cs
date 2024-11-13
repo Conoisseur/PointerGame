@@ -8,9 +8,4 @@ public class DialogueSO : ScriptableObject
     public string objectName;
     public string[] dialogues;
     public int dialogueIndex;
-
-    public string[] GetDialogue()
-    {
-        return dialogues;
-    }
 }
