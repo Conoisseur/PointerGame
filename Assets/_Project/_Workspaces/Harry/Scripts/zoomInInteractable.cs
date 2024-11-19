@@ -1,8 +1,7 @@
+using System.Collections;
 using UnityEngine;
 
-// Stuff that could be added to improve this:
-// Zoom amount based on size of object, I.e. so zooms in more on smaller objects and vice versa
-// Camera pans over to object being clicked on rather than it being instant
+
 [RequireComponent(typeof(BoxCollider2D))]
 public class zoomInInteractable : MonoBehaviour
 {
@@ -10,6 +9,7 @@ public class zoomInInteractable : MonoBehaviour
     private Vector3 originalCameraPosition;
     private float originalZoom;
     private float zoomFactor = 0.4f;
+    private float zoomDuration = 0.2f; 
 
     void Start()
     {
@@ -24,42 +24,49 @@ public class zoomInInteractable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        CenterCameraOnObject();
-        ZoomIn();
+        StartCoroutine(ZoomInCoroutine());
     }
 
     private void OnMouseUp()
     {
-        ResetCameraPosition();
-        ResetZoom();
+        StartCoroutine(ResetCameraCoroutine());
     }
 
-    private void CenterCameraOnObject()
+    private IEnumerator ZoomInCoroutine()
     {
-        if (mainCamera == null) return;
+        float elapsedTime = 0f;
+        Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y, originalCameraPosition.z);
+        float targetZoom = Mathf.Max(0.1f, originalZoom * zoomFactor);
 
-        Vector3 objectPosition = transform.position;
-        mainCamera.transform.position = new Vector3(objectPosition.x, objectPosition.y, originalCameraPosition.z);
+        while (elapsedTime < zoomDuration)
+        {
+            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, targetPosition, elapsedTime / zoomDuration);
+            mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetZoom, elapsedTime / zoomDuration);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        mainCamera.transform.position = targetPosition;
+        mainCamera.orthographicSize = targetZoom;
     }
 
-    private void ZoomIn()
+    private IEnumerator ResetCameraCoroutine()
     {
-        if (mainCamera == null) return;
+        float elapsedTime = 0f;
+        Vector3 targetPosition = originalCameraPosition;
+        float targetZoom = originalZoom;
 
-        mainCamera.orthographicSize = Mathf.Max(0.1f, originalZoom * zoomFactor);
-    }
+        while (elapsedTime < zoomDuration)
+        {
+            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, targetPosition, elapsedTime / zoomDuration);
+            mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetZoom, elapsedTime / zoomDuration);
 
-    private void ResetCameraPosition()
-    {
-        if (mainCamera == null) return;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
 
-        mainCamera.transform.position = originalCameraPosition;
-    }
-
-    private void ResetZoom()
-    {
-        if (mainCamera == null) return;
-
-        mainCamera.orthographicSize = originalZoom;
+        mainCamera.transform.position = targetPosition;
+        mainCamera.orthographicSize = targetZoom;
     }
 }
