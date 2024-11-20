@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,12 +9,14 @@ public class ShowDialogue : MonoBehaviour
     public DialogueSO dialogueSo;
     
     public TextMeshProUGUI textDisplay;
-    
-    private void ShowText()
+
+    void ShowText()
     {
         string[] dialogues = dialogueSo.dialogues;
         int index = dialogueSo.dialogueIndex;
         
+        Debug.Log(dialogues[index]);
+        Debug.Log(index);
         if (index >= 0 && index < dialogues.Length)
         {
             textDisplay.text = dialogues[index];
@@ -27,5 +30,9 @@ public class ShowDialogue : MonoBehaviour
             dialogueSo.dialogueIndex = 0;
         }
     }
-    
+
+    void OnMouseDown()
+    {
+        ShowText();
+    }
 }
