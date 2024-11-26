@@ -9,7 +9,7 @@ public class ShowDialogue : MonoBehaviour
     
     public TextMeshProUGUI textDisplay;
     
-    private void ShowText()
+    public void ShowText()
     {
         string[] dialogues = dialogueSo.dialogues;
         int index = dialogueSo.dialogueIndex;
@@ -27,5 +27,12 @@ public class ShowDialogue : MonoBehaviour
             dialogueSo.dialogueIndex = 0;
         }
     }
-    
+
+    public void OnMouseDown()
+    {
+        ShowText();
+    }
+
 }
+
+

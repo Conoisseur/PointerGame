@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: cat
+    uniqueID: 153514129
+    locked: 0
+  - name: clock
+    uniqueID: 3665697497
+    locked: 0

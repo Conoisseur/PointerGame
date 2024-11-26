@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/_Workspaces/Lee/Scenes/FirstScene.unity
     guid: f7c9581dc9462894b8fca6f92d9aa308
+  - enabled: 1
+    path: Assets/_Project/_Workspaces/Harry/Scenes/coolTestScene.unity
+    guid: 3470df376c9b1e44a91d84e839b3bdcc
+  - enabled: 1
+    path: Assets/_Project/_Workspaces/Harry/Scenes/coolTestSceneTwo.unity
+    guid: 7a06857b4847aa14e833084886633db6
   m_configObjects: {}
