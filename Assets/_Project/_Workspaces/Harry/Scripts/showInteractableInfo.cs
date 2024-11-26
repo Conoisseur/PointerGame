@@ -4,29 +4,29 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class ShowInteractableInfo : MonoBehaviour
 {
-    private TextMeshProUGUI dialogueText;
+    private TypingEffect typingEffect;  
+
     private void Start()
     {
         GameObject dialogueTextObject = GameObject.FindWithTag("Dialogue Box");
 
         if (dialogueTextObject != null)
         {
-            dialogueText = dialogueTextObject.GetComponent<TextMeshProUGUI>();
+            typingEffect = dialogueTextObject.GetComponent<TypingEffect>();
         }
 
-        if (dialogueText == null)
+        if (typingEffect == null)
         {
-            Debug.LogError("Dialogue Box not found!");
+            Debug.LogError("TypingEffect component not found on Dialogue Box!");
         }
     }
 
-
     private void OnMouseDown()
     {
-        if (dialogueText != null)
+        if (typingEffect != null)
         {
             Debug.Log("Clicked on " + gameObject.name);
-            dialogueText.text = gameObject.name;
+            typingEffect.type(gameObject.name);  
         }
     }
 }
