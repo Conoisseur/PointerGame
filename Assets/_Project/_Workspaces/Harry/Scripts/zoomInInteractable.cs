@@ -27,6 +27,15 @@ public class zoomInInteractable : MonoBehaviour
         CreateResetButton();
     }
 
+    private void OnDestroy()
+    {
+        if (resetButton != null)
+        {
+            Destroy(resetButton);
+        }
+    }
+
+
     private void CreateResetButton()
     {
         resetButton = new GameObject("ResetButton");

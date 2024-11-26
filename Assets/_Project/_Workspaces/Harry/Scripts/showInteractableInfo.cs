@@ -1,13 +1,25 @@
 using TMPro;
 using UnityEngine;
 
-/// Displays information about the object when it is clicked on.
-/// Intended to be attached to the object being clicked.
-/// Requires a BoxCollider2D component to detect clicks on the object.
 [RequireComponent(typeof(BoxCollider2D))]
 public class ShowInteractableInfo : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText;
+    private TextMeshProUGUI dialogueText;
+    private void Start()
+    {
+        GameObject dialogueTextObject = GameObject.FindWithTag("Dialogue Box");
+
+        if (dialogueTextObject != null)
+        {
+            dialogueText = dialogueTextObject.GetComponent<TextMeshProUGUI>();
+        }
+
+        if (dialogueText == null)
+        {
+            Debug.LogError("Dialogue Box not found!");
+        }
+    }
+
 
     private void OnMouseDown()
     {
