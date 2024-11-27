@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class ShowInteractableInfo : MonoBehaviour
 {
-    private TypingEffect typingEffect;  
+    private DialogueBoxWriter typingEffect;  
 
     private void Start()
     {
@@ -12,7 +12,7 @@ public class ShowInteractableInfo : MonoBehaviour
 
         if (dialogueTextObject != null)
         {
-            typingEffect = dialogueTextObject.GetComponent<TypingEffect>();
+            typingEffect = dialogueTextObject.GetComponent<DialogueBoxWriter>();
         }
 
         if (typingEffect == null)
