@@ -4,18 +4,13 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class ShowInteractableInfo : MonoBehaviour
 {
-    private DialogueBoxWriter typingEffect;  
+    private DialogueBoxWriter _typingEffect;  
 
     private void Start()
     {
-        GameObject dialogueTextObject = GameObject.FindWithTag("Dialogue Box");
+        _typingEffect = FindObjectOfType<DialogueBoxWriter>();
 
-        if (dialogueTextObject != null)
-        {
-            typingEffect = dialogueTextObject.GetComponent<DialogueBoxWriter>();
-        }
-
-        if (typingEffect == null)
+        if (_typingEffect == null)
         {
             Debug.LogError("TypingEffect component not found on Dialogue Box!");
         }
@@ -23,10 +18,10 @@ public class ShowInteractableInfo : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (typingEffect != null)
+        if (_typingEffect != null)
         {
             Debug.Log("Clicked on " + gameObject.name);
-            typingEffect.type(gameObject.name);  
+            _typingEffect.type(gameObject.name);  
         }
     }
 }

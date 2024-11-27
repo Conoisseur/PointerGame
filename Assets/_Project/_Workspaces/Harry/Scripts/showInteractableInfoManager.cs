@@ -12,12 +12,18 @@ using UnityEngine;
 public class ShowInteractableInfoManager : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
+    private Camera _camera;
+
+    private void Start()
+    {
+        _camera = Camera.main;
+    }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
 
             Collider2D hit = Physics2D.OverlapPoint(mousePosition);
 

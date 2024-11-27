@@ -5,16 +5,16 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public Color hoverColor = Color.yellow; // Tint color when hovering
-    private Color originalColor; // Store the original color
-    private Renderer objectRenderer;
+    private Color _originalColor; // Store the original color
+    private Renderer _objectRenderer;
 
     void Start()
     {
         // Get the Renderer component and store the original color
-        objectRenderer = GetComponent<SpriteRenderer>();
-        if (objectRenderer != null)
+        _objectRenderer = GetComponent<SpriteRenderer>();
+        if (_objectRenderer != null)
         {
-            originalColor = objectRenderer.material.color;
+            _originalColor = _objectRenderer.material.color;
         }
         
     }
@@ -22,18 +22,18 @@ public class NewBehaviourScript : MonoBehaviour
     void OnMouseEnter()
     {
         // Change the material color to the hover color
-        if (objectRenderer != null)
+        if (_objectRenderer != null)
         {
-            objectRenderer.material.color = hoverColor;
+            _objectRenderer.material.color = hoverColor;
         }
     }
 
     void OnMouseExit()
     {
         // Reset the material color to the original color
-        if (objectRenderer != null)
+        if (_objectRenderer != null)
         {
-            objectRenderer.material.color = originalColor;
+            _objectRenderer.material.color = _originalColor;
         }
     }
 }
