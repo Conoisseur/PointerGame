@@ -9,25 +9,25 @@ public class ShowDialogue : MonoBehaviour
     public DialogueSO dialogueSo;
     
     public TextMeshProUGUI textDisplay;
+    private int _index = 0;
 
     void ShowText()
     {
         string[] dialogues = dialogueSo.dialogues;
-        int index = dialogueSo.dialogueIndex;
         
-        Debug.Log(dialogues[index]);
-        Debug.Log(index);
-        if (index >= 0 && index < dialogues.Length)
+        Debug.Log(dialogues[_index]);
+        Debug.Log(_index);
+        if (_index >= 0 && _index < dialogues.Length)
         {
-            textDisplay.text = dialogues[index];
+            textDisplay.text = dialogues[_index];
         }
         
-        if (index < dialogues.Length - 1) {
-            dialogueSo.dialogueIndex++;
+        if (_index < dialogues.Length - 1) {
+            _index++;
         }
         else
         {
-            dialogueSo.dialogueIndex = 0;
+            _index = 0;
         }
     }
 
