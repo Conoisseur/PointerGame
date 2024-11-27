@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,6 +15,8 @@ public class ShowDialogue : MonoBehaviour
         string[] dialogues = dialogueSo.dialogues;
         int index = dialogueSo.dialogueIndex;
         
+        Debug.Log(dialogues[index]);
+        Debug.Log(index);
         if (index >= 0 && index < dialogues.Length)
         {
             textDisplay.text = dialogues[index];
