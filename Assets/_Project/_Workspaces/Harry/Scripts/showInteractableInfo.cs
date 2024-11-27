@@ -1,20 +1,32 @@
 using TMPro;
 using UnityEngine;
 
-/// Displays information about the object when it is clicked on.
-/// Intended to be attached to the object being clicked.
-/// Requires a BoxCollider2D component to detect clicks on the object.
 [RequireComponent(typeof(BoxCollider2D))]
 public class ShowInteractableInfo : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText;
+    private DialogueBoxWriter typingEffect;  
+
+    private void Start()
+    {
+        GameObject dialogueTextObject = GameObject.FindWithTag("Dialogue Box");
+
+        if (dialogueTextObject != null)
+        {
+            typingEffect = dialogueTextObject.GetComponent<DialogueBoxWriter>();
+        }
+
+        if (typingEffect == null)
+        {
+            Debug.LogError("TypingEffect component not found on Dialogue Box!");
+        }
+    }
 
     private void OnMouseDown()
     {
-        if (dialogueText != null)
+        if (typingEffect != null)
         {
             Debug.Log("Clicked on " + gameObject.name);
-            dialogueText.text = gameObject.name;
+            typingEffect.type(gameObject.name);  
         }
     }
 }
