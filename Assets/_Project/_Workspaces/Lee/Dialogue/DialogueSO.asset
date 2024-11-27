@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: spoon
   dialogues:
-  - asdjfiajdsfjaodijfoiasdjf\
-  - 2
-  - 3
-  dialogueIndex: 0
+  - a key
+  - its a key
+  - still a key
