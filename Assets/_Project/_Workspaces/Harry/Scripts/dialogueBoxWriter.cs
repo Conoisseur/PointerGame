@@ -2,7 +2,9 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class TypingEffect : MonoBehaviour
+public class DialogueBoxWriter : MonoBehaviour
+    // Attach as component to dialogue box
+    // Manages text that is requested to be put in dialogue box
 {
     private TextMeshProUGUI dialogueText;
     private float typingSpeed = 0.1f;    
