@@ -15,8 +15,6 @@ public class ShowDialogue : MonoBehaviour
         string[] dialogues = dialogueSo.dialogues;
         int index = dialogueSo.dialogueIndex;
         
-        Debug.Log(dialogues[index]);
-        Debug.Log(index);
         if (index >= 0 && index < dialogues.Length)
         {
             textDisplay.text = dialogues[index];
@@ -31,7 +29,7 @@ public class ShowDialogue : MonoBehaviour
         }
     }
 
-    public void OnMouseDown()
+    public virtual void OnMouseDown()
     {
         ShowText();
     }
