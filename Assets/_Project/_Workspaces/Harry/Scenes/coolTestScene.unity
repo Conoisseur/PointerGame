@@ -122,6 +122,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &12392077
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +409,8 @@ Transform:
   - {fileID: 1592905374}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &503375777
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +548,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+<<<<<<< Updated upstream
 --- !u!1 &531029563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1061,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 275300501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1377376738 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3059483186492910808, guid: 82f82c606f54bf54f955dcbbde20781c, type: 3}
@@ -1450,6 +1456,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1429664592}
   m_SourcePrefab: {fileID: 100100000, guid: 82f82c606f54bf54f955dcbbde20781c, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1969348565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,6 +1672,65 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+=======
+--- !u!1001 &4598765508801066651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6636380886224029596, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+      propertyPath: m_Name
+      value: Audio Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685580794423237603, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685580794423237603, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685580794423237603, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685580794423237603, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685580794423237603, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685580794423237603, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685580794423237603, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685580794423237603, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685580794423237603, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685580794423237603, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e4f9ecd989ff344ab590b0b7079d03f, type: 3}
+>>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1674,4 +1740,9 @@ SceneRoots:
   - {fileID: 2118335515}
   - {fileID: 1839009575}
   - {fileID: 1706368071}
+<<<<<<< Updated upstream
   - {fileID: 275300501}
+=======
+  - {fileID: 4598765508801066651}
+  - {fileID: 1750387779}
+>>>>>>> Stashed changes
