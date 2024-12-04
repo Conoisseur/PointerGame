@@ -7,9 +7,20 @@ using UnityEngine;
 public class ShowDialogue : MonoBehaviour
 {
     public DialogueSO dialogueSo;
-    
-    public TextMeshProUGUI textDisplay;
-    
+    private DialogueBoxWriter _dialogueBoxWriter;
+
+    //public TextMeshProUGUI textDisplay;
+
+    private void Start()
+    {
+        _dialogueBoxWriter = FindObjectOfType<DialogueBoxWriter>();
+
+        if (_dialogueBoxWriter == null)
+        {
+            Debug.LogError("Dialogue box component not found on Dialogue Box!");
+        }
+    }
+
     public void ShowText()
     {
         string[] dialogues = dialogueSo.dialogues;
@@ -19,7 +30,8 @@ public class ShowDialogue : MonoBehaviour
         Debug.Log(index);
         if (index >= 0 && index < dialogues.Length)
         {
-            textDisplay.text = dialogues[index];
+            //textDisplay.text = dialogues[index];
+            _dialogueBoxWriter.type(dialogues[index]);
         }
         
         if (index < dialogues.Length - 1) {

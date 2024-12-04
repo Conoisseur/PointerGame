@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Cat
   dialogues:
-  - CatCat
-  - Cat2
-  - Cat3
-  dialogueIndex: 2
+  - It's cat
+  - still cat
+  - cat again
+  - very act
+  dialogueIndex: 0
