@@ -17,14 +17,18 @@ public class ShowDialogue : MonoBehaviour
 
         if (_dialogueBoxWriter == null)
         {
-            Debug.LogError("Dialogue box component not found on Dialogue Box!");
+            Debug.LogError("Dialogue box component not found on Dialogue Box in Start!");
         }
+        Debug.Log(_dialogueBoxWriter);
     }
 
     public void ShowText()
     {
         string[] dialogues = dialogueSo.dialogues;
         int index = dialogueSo.dialogueIndex;
+        if (_dialogueBoxWriter == null){
+            _dialogueBoxWriter = FindObjectOfType<DialogueBoxWriter>();
+        }
         
         if (index >= 0 && index < dialogues.Length)
         {

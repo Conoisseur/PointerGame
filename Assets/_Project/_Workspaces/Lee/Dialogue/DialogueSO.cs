@@ -7,5 +7,5 @@ public class DialogueSO : ScriptableObject
 {
     public string objectName;
     public string[] dialogues;
-    [HideInInspector] public int dialogueIndex;
+    [HideInInspector] public int dialogueIndex = 0;
 }
