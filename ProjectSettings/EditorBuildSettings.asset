@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Production/Scenes/SCN_Prod.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/_Workspaces/Lee/Scenes/FirstScene.unity
     guid: f7c9581dc9462894b8fca6f92d9aa308
-  - enabled: 1
-    path: Assets/_Project/_Workspaces/Harry/Scenes/bncdjiabufewj.unity
+  - enabled: 0
+    path: Assets/_Project/_Workspaces/Harry/Scenes/coolTestScene.unity
     guid: 3470df376c9b1e44a91d84e839b3bdcc
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/_Workspaces/Harry/Scenes/coolTestSceneTwo.unity
     guid: 7a06857b4847aa14e833084886633db6
+  - enabled: 1
+    path: Assets/_Project/Production/Scenes/DoorRoom.unity
+    guid: 78bb01ee9014c68409d686e7e6d52f58
   m_configObjects: {}
