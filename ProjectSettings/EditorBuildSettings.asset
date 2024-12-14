@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Production/Scenes/DoorRoom.unity
     guid: 78bb01ee9014c68409d686e7e6d52f58
+  - enabled: 1
+    path: Assets/_Project/Production/Scenes/WallRoom.unity
+    guid: 497f160aeffe19f48abdffdcf88452b2
+  - enabled: 1
+    path: Assets/_Project/Production/Scenes/FireplaceRoom.unity
+    guid: 7e051154566374648b599b3549f33813
+  - enabled: 1
+    path: Assets/_Project/Production/Scenes/WindowRoom.unity
+    guid: 230e850352d3b06418ecc30ab06f7cf3
   m_configObjects: {}
