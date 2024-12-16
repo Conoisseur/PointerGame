@@ -11,6 +11,7 @@ public class DialogueBoxWriter : MonoBehaviour
 
     private void Awake()
     {
+
         dialogueText = GetComponent<TextMeshProUGUI>();
 
         if (dialogueText == null)
@@ -21,12 +22,16 @@ public class DialogueBoxWriter : MonoBehaviour
 
     public void type(string message)
     {
+        // TODO stops all coroutines to ensure only one coroutine typing at a time
+        // If coroutine used in another part of program, could interfere so probably need to change lol
+        StopAllCoroutines();
+
         StartCoroutine(TypeText(message)); 
     }
 
     private IEnumerator TypeText(string message)
     {
-        dialogueText.text = ""; 
+        dialogueText.text = "";
 
         foreach (char letter in message)
         {

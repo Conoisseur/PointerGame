@@ -54,7 +54,7 @@ public class zoomInInteractable : MonoBehaviour
         rectTransform.anchorMax = new Vector2(1, 1); 
         rectTransform.pivot = new Vector2(1, 1); 
         rectTransform.anchoredPosition = new Vector2(-10, -10); 
-        rectTransform.sizeDelta = new Vector2(100, 100); 
+        rectTransform.sizeDelta = new Vector2(500, 500); 
 
         _resetButton.SetActive(false);
     }
