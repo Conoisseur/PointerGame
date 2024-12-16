@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;  // Import UnityEvents
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class zoomInInteractable : MonoBehaviour
@@ -15,6 +16,9 @@ public class zoomInInteractable : MonoBehaviour
 
     private GameObject _resetButton;
 
+    // Define the event to show/hide the pickup button
+    public UnityEvent onZoomOutEvent;  // Event that will be triggered when zooming out
+
     void Start()
     {
         _camera = Camera.main;
@@ -26,8 +30,11 @@ public class zoomInInteractable : MonoBehaviour
         }
 
         CreateResetButton();
-    }
 
+        // If the event is not assigned, we assign a default listener
+        if (onZoomOutEvent == null)
+            onZoomOutEvent = new UnityEvent();
+    }
 
     private void CreateResetButton()
     {
@@ -45,27 +52,25 @@ public class zoomInInteractable : MonoBehaviour
         var image = _resetButton.AddComponent<Image>();
         _resetButton.transform.SetParent(canvas.transform);
 
-        image.sprite = Resources.Load<Sprite>("exit_button"); 
+        image.sprite = Resources.Load<Sprite>("exit_button");
 
         button.onClick.AddListener(() => StartCoroutine(ResetCameraCoroutine()));
 
         RectTransform rectTransform = _resetButton.GetComponent<RectTransform>();
         rectTransform.anchorMin = new Vector2(1, 1);
-        rectTransform.anchorMax = new Vector2(1, 1); 
-        rectTransform.pivot = new Vector2(1, 1); 
-        rectTransform.anchoredPosition = new Vector2(-10, -10); 
-        rectTransform.sizeDelta = new Vector2(500, 500); 
+        rectTransform.anchorMax = new Vector2(1, 1);
+        rectTransform.pivot = new Vector2(1, 1);
+        rectTransform.anchoredPosition = new Vector2(-10, -10);
+        rectTransform.sizeDelta = new Vector2(500, 500);
 
         _resetButton.SetActive(false);
     }
-
 
     private void OnMouseDown()
     {
         if (!_zoomEnabled)
         {
             StartCoroutine(ZoomInCoroutine());
-
         }
     }
 
@@ -89,14 +94,16 @@ public class zoomInInteractable : MonoBehaviour
 
         _camera.transform.position = targetPosition;
         _camera.orthographicSize = targetZoom;
-
-
     }
 
     private IEnumerator ResetCameraCoroutine()
     {
         _resetButton.SetActive(false);
         _zoomEnabled = false;
+
+        // Trigger the event to hide the pickup button when zooming out
+        if (onZoomOutEvent != null)
+            onZoomOutEvent.Invoke();
 
         float elapsedTime = 0f;
         Vector3 targetPosition = _originalCameraPosition;
@@ -114,7 +121,7 @@ public class zoomInInteractable : MonoBehaviour
         _camera.transform.position = targetPosition;
         _camera.orthographicSize = targetZoom;
     }
-    
+
     private void OnDestroy()
     {
         if (_resetButton != null)

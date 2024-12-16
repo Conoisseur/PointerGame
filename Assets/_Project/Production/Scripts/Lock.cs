@@ -5,10 +5,10 @@ using System.Collections;
 
 public class Lock : MonoBehaviour
 {
-    public DialogueSO noKeyDialogueSO; // Dialogue if the player doesn't have the key
-    public DialogueSO hasKeyDialogueSO; // Dialogue if the player has the key
-    public string winMessage = "You Win!"; // Message to display on victory
-    public float delayBeforeQuit = 2f; // Delay before quitting the game
+    public DialogueSO noKeyDialogueSO; 
+    public DialogueSO hasKeyDialogueSO; 
+    public string winMessage = "You Win!"; 
+    public float delayBeforeQuit = 2f;
 
     private DialogueBoxWriter _dialogueBoxWriter;
 
