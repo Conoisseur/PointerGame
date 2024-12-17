@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: 
   dialogues:
-  - You pick up the key
-  dialogueIndex: 0
+  - It's a golden key
+  - Maybe you should pick it up?
+  - It smells of key...
+  - It might be for that big door where you started?
+  - pick up the key dumbass
+  dialogueIndex: 1
