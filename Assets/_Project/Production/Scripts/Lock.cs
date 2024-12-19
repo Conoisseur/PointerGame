@@ -217,6 +217,14 @@ public class Lock : MonoBehaviour
         #endif
     }
 
+    private void OnDestroy()
+    {
+        if (_insertKeyButtonObject != null)
+        {
+            Destroy(_insertKeyButtonObject);
+        }
+    }
+
 
 
 }
