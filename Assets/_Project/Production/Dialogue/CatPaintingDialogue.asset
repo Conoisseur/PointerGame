@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Cat
   dialogues:
-  - Weird...
+  - Woah! Cool painting!
   - That's a cat
   - You get closer for a better look...
   - Yep. Defintely a cat
+  - Also the combination to the locked chest is 1234 lol
   dialogueIndex: 0

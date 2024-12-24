@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a13a7887492cc4891aca761de9615a, type: 3}
+  m_Name: MirrorDialogue
+  m_EditorClassIdentifier: 
+  objectName: Cat
+  dialogues:
+  - The mirror is tarnished and cracked, reflecting a distorted image of yourself.
+    A sense of unease washes over you
+  - Touching the surface, a cold sensation spreads across your fingertips. The image
+    in the mirror ripples and distorts, before returning to normal
+  - The longer you look, the more the image becomes increasingly distorted, until
+    it's almost unrecognisable
+  - 'A faint whisper echoes from the mirror: *Look closer.*'
+  - Thee image flickers and fades, replaced by a shadowy figure that quickly disappears
+  dialogueIndex: 0
