@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityUtils;
 
-public class MUZIKSKRIPT : MonoBehaviour
+public class MUZIKSKRIPT : PersistentSingleton<MUZIKSKRIPT>
 {
     public AudioSource main;
     public AudioSource cymbal;

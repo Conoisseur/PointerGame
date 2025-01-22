@@ -95,7 +95,7 @@ public class Lock : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (playerInventory.Instance != null && playerInventory.Instance.playerHasKey)
+        if (PlayerInventory.Instance != null && PlayerInventory.Instance.playerHasKey)
         {
             ShowInsertKeyButton();
         }

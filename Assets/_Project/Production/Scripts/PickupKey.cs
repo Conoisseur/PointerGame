@@ -12,7 +12,7 @@ public class PickupKey : MonoBehaviour
     void Start()
     {
         // If key already been picked up then destroy it in scene
-        if (playerInventory.Instance.playerHasKey)
+        if (PlayerInventory.Instance.playerHasKey)
         {
             Destroy(gameObject);
             return;
@@ -89,7 +89,7 @@ public class PickupKey : MonoBehaviour
 
     private void PickupKeyAction()
     {
-        playerInventory.Instance.playerHasKey = true;
+        PlayerInventory.Instance.playerHasKey = true;
         Debug.Log("Key picked up!");
 
         HidePickupButton();
