@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,38 @@ public class zoomInInteractable : MonoBehaviour
     // Define the event to show/hide the pickup button
     public UnityEvent onZoomOutEvent;  // Event that will be triggered when zooming out
 
+    [Serializable]
+    public enum AudioTrigger
+    {
+        Cymbal,
+        Marimba,
+        Clock,
+        Victory,
+        ClueComplete
+    }
+
+    public void TriggerAudio(int audioTrigger)
+    {
+        switch (audioTrigger)
+        {
+            case 0:
+                MUZIKSKRIPT.Instance.OnFindingHiddenMessage();
+                break;
+            case 1:
+                MUZIKSKRIPT.Instance.OnFindingHiddenObject();
+                break;
+            case 2:
+                MUZIKSKRIPT.Instance.OnAlphabetScriptThing();
+                break;
+            case 3:
+                MUZIKSKRIPT.Instance.OnVictory();
+                break;
+            case 4:
+                MUZIKSKRIPT.Instance.OnClueComplete();
+                break;
+        }
+    }
+    
     void Start()
     {
         _camera = Camera.main;

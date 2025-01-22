@@ -214,6 +214,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 603289895}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: zoomInInteractable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2284852898429946232, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: m_Size.x
       value: 10.6972885
@@ -301,29 +333,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5855266509820672759, guid: da2626dbf27efd443867a24224ab215c, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 1410553200}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da2626dbf27efd443867a24224ab215c, type: 3}
---- !u!1 &1410553197 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5855266509820672759, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+--- !u!114 &603289895 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
   m_PrefabInstance: {fileID: 603289894}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1410553200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410553197}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 074dc4cefc97efc4588264e56c9a987a, type: 3}
+  m_Script: {fileID: 11500000, guid: aae22e70cb131cd49821b8ab0ce0a258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotionalSong: {fileID: 8300000, guid: c42fb2be7d5077e4db4cf1bd3f12de84, type: 3}
 --- !u!1001 &1506927293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -530,6 +552,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1718282682}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: zoomInInteractable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: onZoomOutEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2284852898429946232, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: m_Size.x
       value: 23.774239
@@ -619,6 +673,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+--- !u!114 &1718282682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+  m_PrefabInstance: {fileID: 1718282681}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae22e70cb131cd49821b8ab0ce0a258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1818702938
 GameObject:
   m_ObjectHideFlags: 0
