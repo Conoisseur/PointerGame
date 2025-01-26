@@ -16,7 +16,7 @@ public class LoadNextScene : MonoBehaviour
             {
                 index = 0;
             }
-            Debug.Log(index);
+            // Debug.Log(index);
             loaded = SceneLoader.Instance.LoadScene(index);
         } while (!loaded);
     }

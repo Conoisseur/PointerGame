@@ -9,7 +9,6 @@ public class Lock : MonoBehaviour
 {
     public DialogueSO noKeyDialogueSO;
     public DialogueSO hasKeyDialogueSO;
-    public string winMessage = "You Win!";
     private float delayBeforeQuit = 10f;
 
     private DialogueBoxWriter _dialogueBoxWriter;
@@ -26,6 +25,7 @@ public class Lock : MonoBehaviour
 
         CreateInsertKeyButton();
         _insertKeyButtonObject.SetActive(false);
+        
     }
 
     private void CreateInsertKeyButton()
@@ -121,15 +121,6 @@ public class Lock : MonoBehaviour
 
     private void InsertKeyAction()
     {
-        if (_dialogueBoxWriter != null)
-        {
-            _dialogueBoxWriter.type(winMessage);
-        }
-        else
-        {
-            Debug.Log(winMessage);
-        }
-
         _insertKeyButtonObject.SetActive(false);
 
         SpriteRenderer lockRenderer = GetComponent<SpriteRenderer>();
@@ -144,8 +135,18 @@ public class Lock : MonoBehaviour
 
     private IEnumerator EndGame()
     {
-
+        GameObject ui = GameObject.Find("PersistentUI");
+        if (ui == null)
+        {
+            Debug.LogError("PersistentUI not found in the scene!");
+        }
+        else
+        {
+            ui.SetActive(false);
+        }
+        
         SceneLoader.Instance.LoadEndScene();
+        
 
         yield return new WaitForSeconds(delayBeforeQuit);
 

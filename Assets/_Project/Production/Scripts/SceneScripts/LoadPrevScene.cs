@@ -16,7 +16,7 @@ public class LoadPrevScene : MonoBehaviour
             {
                 index = SceneManager.sceneCountInBuildSettings - 1;
             }
-            Debug.Log(index);
+            // Debug.Log(index);
             loaded = SceneLoader.Instance.LoadScene(index);
         } while (!loaded);
     }

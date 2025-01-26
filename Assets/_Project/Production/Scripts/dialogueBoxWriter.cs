@@ -7,7 +7,7 @@ public class DialogueBoxWriter : MonoBehaviour
     // Manages text that is requested to be put in dialogue box
 {
     private TextMeshProUGUI dialogueText;
-    private float typingSpeed = 0.08f;    
+    public float typingSpeed = 0.08f;    
 
     private void Awake()
     {
