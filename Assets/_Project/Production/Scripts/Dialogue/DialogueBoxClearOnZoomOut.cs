@@ -39,7 +39,6 @@ public class DialogueBoxClearOnZoomOut : MonoBehaviour
     {
         if (_dialogueBoxWriter != null)
         {
-            Debug.Log("Clearing dialogue box.");
             _dialogueBoxWriter.type("");
         }
         else

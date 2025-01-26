@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;  // Import UnityEvents
+using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class zoomInInteractable : MonoBehaviour
@@ -12,46 +12,12 @@ public class zoomInInteractable : MonoBehaviour
     private float _originalZoom;
     private bool _zoomEnabled = false;
 
-    [SerializeField] private float zoomFactor = 0.4f;
     [SerializeField] private float zoomDuration = 0.5f;
 
     private GameObject _resetButton;
 
-    // Define the event to show/hide the pickup button
-    public UnityEvent onZoomOutEvent;  // Event that will be triggered when zooming out
+    public UnityEvent onZoomOutEvent; // Event triggered on zoom out
 
-    [Serializable]
-    public enum AudioTrigger
-    {
-        Cymbal,
-        Marimba,
-        Clock,
-        Victory,
-        ClueComplete
-    }
-
-    public void TriggerAudio(int audioTrigger)
-    {
-        switch (audioTrigger)
-        {
-            case 0:
-                MUZIKSKRIPT.Instance.OnFindingHiddenMessage();
-                break;
-            case 1:
-                MUZIKSKRIPT.Instance.OnFindingHiddenObject();
-                break;
-            case 2:
-                MUZIKSKRIPT.Instance.OnAlphabetScriptThing();
-                break;
-            case 3:
-                MUZIKSKRIPT.Instance.OnVictory();
-                break;
-            case 4:
-                MUZIKSKRIPT.Instance.OnClueComplete();
-                break;
-        }
-    }
-    
     void Start()
     {
         _camera = Camera.main;
@@ -64,7 +30,6 @@ public class zoomInInteractable : MonoBehaviour
 
         CreateResetButton();
 
-        // If the event is not assigned, we assign a default listener
         if (onZoomOutEvent == null)
             onZoomOutEvent = new UnityEvent();
     }
@@ -113,8 +78,10 @@ public class zoomInInteractable : MonoBehaviour
         _zoomEnabled = true;
 
         float elapsedTime = 0f;
+
+        // Calculate the target position and zoom
         Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y, _originalCameraPosition.z);
-        float targetZoom = Mathf.Max(0.1f, _originalZoom * zoomFactor);
+        float targetZoom = CalculateTargetZoom();
 
         while (elapsedTime < zoomDuration)
         {
@@ -129,12 +96,36 @@ public class zoomInInteractable : MonoBehaviour
         _camera.orthographicSize = targetZoom;
     }
 
+    private float CalculateTargetZoom()
+    {
+        // Get the renderer bounds of the object
+        Renderer renderer = GetComponent<Renderer>();
+        if (renderer == null)
+        {
+            Debug.LogError("No Renderer found on the object to calculate zoom!");
+            return _originalZoom;
+        }
+
+        Bounds bounds = renderer.bounds;
+
+        float objectWidth = bounds.size.x;
+        float objectHeight = bounds.size.y;
+
+        float screenAspect = (float)Screen.width / (float)Screen.height;
+
+        // Determine the zoom level required to fit the object
+        float zoomForWidth = objectWidth / (2f * screenAspect);
+        float zoomForHeight = objectHeight / 2f;
+
+        // Return the larger zoom level to ensure the whole object fits
+        return Mathf.Max(zoomForWidth, zoomForHeight);
+    }
+
     private IEnumerator ResetCameraCoroutine()
     {
         _resetButton.SetActive(false);
         _zoomEnabled = false;
 
-        // Trigger the event to hide the pickup button when zooming out
         if (onZoomOutEvent != null)
             onZoomOutEvent.Invoke();
 
