@@ -12,6 +12,7 @@ public class zoomInInteractable : MonoBehaviour
     private bool _zoomEnabled = false;
 
     public bool bypasssZoomConstraints = false;
+    public bool disableResetButton = false;
 
     [SerializeField] private float zoomDuration = 0.5f;
 
@@ -75,7 +76,11 @@ public class zoomInInteractable : MonoBehaviour
 
     private IEnumerator ZoomInCoroutine()
     {
-        _resetButton.SetActive(true);
+        if (!disableResetButton)
+        {
+            _resetButton.SetActive(true);
+
+        }
         _zoomEnabled = true;
 
         Debug.Log("zoomin in");

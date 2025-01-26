@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: disableResetButton
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: bypasssZoomConstraints
       value: 1
       objectReference: {fileID: 0}
