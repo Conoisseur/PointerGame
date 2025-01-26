@@ -379,6 +379,26 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1789841405}
+    - target: {fileID: 3713750122861161525, guid: 003aaf69c3d8f8347b869090cbc77225, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824101797430412965, guid: 003aaf69c3d8f8347b869090cbc77225, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824101797430412965, guid: 003aaf69c3d8f8347b869090cbc77225, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -870
+      objectReference: {fileID: 0}
+    - target: {fileID: 5416335428353006502, guid: 003aaf69c3d8f8347b869090cbc77225, type: 3}
+      propertyPath: spawnPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5416335428353006502, guid: 003aaf69c3d8f8347b869090cbc77225, type: 3}
+      propertyPath: spawnPosition.y
+      value: -1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5695899856943106383, guid: 003aaf69c3d8f8347b869090cbc77225, type: 3}
       propertyPath: unlockedPins.Array.data[0]
       value: 9

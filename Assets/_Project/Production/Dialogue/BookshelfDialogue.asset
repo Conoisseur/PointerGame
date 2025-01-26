@@ -19,6 +19,5 @@ MonoBehaviour:
     book in particular seems out of place. '
   - 'The book is smaller than the others, its cover worn and faded. '
   - As you open the book, it falls open to a strange script. It seems to be a translation
-    of an ancient language.
-  - '[4]'
-  dialogueIndex: 0
+    of an ancient language. [9]
+  dialogueIndex: 2

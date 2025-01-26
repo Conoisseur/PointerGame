@@ -18,5 +18,5 @@ MonoBehaviour:
     lock secures the lid, the metal cold and unforgiving.
   - You try to tug on the lock, but it doesn't budge.
   - The chest is secured tightly, defying any attempt to open it.
-  - A cold sensation grips your hand as you touch the lock. /n It feels... alive.
-  dialogueIndex: 1
+  - A cold sensation grips your hand as you touch the lock. It feels... alive.
+  dialogueIndex: 2
