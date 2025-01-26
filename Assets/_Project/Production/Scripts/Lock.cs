@@ -15,10 +15,6 @@ public class Lock : MonoBehaviour
     private DialogueBoxWriter _dialogueBoxWriter;
     private GameObject _insertKeyButtonObject;
     private TMP_FontAsset _customFont;
-
-    private SpriteRenderer _blackScreenRenderer; 
-    private SpriteRenderer _endScreenRenderer; 
-
     private void Start()
     {
         _dialogueBoxWriter = FindObjectOfType<DialogueBoxWriter>();
@@ -30,36 +26,6 @@ public class Lock : MonoBehaviour
 
         CreateInsertKeyButton();
         _insertKeyButtonObject.SetActive(false);
-
-        GameObject blackScreenObject = GameObject.Find("Black Screen");
-        if (blackScreenObject != null)
-        {
-            _blackScreenRenderer = blackScreenObject.GetComponent<SpriteRenderer>();
-
-            if (_blackScreenRenderer == null)
-            {
-                Debug.LogError("'Black Screen' object is missing a SpriteRenderer component!");
-            }
-        }
-        else
-        {
-            Debug.LogError("Could not find a GameObject named 'Black Screen' in the scene!");
-        }
-
-        GameObject endScreenObject = GameObject.Find("End Screen");
-        if (endScreenObject != null)
-        {
-            _endScreenRenderer = endScreenObject.GetComponent<SpriteRenderer>();
-
-            if (_endScreenRenderer == null)
-            {
-                Debug.LogError("'End Screen' object is missing a SpriteRenderer component!");
-            }
-        }
-        else
-        {
-            Debug.LogError("Could not find a GameObject named 'End Screen' in the scene!");
-        }
     }
 
     private void CreateInsertKeyButton()
@@ -179,33 +145,7 @@ public class Lock : MonoBehaviour
     private IEnumerator EndGame()
     {
 
-        yield return new WaitForSeconds(2f);
-
-        if (_blackScreenRenderer != null)
-        {
-            _blackScreenRenderer.enabled = true;
-        }
-
-        yield return new WaitForSeconds(3f);
-
-        if (_endScreenRenderer != null)
-        {
-            _endScreenRenderer.enabled = true;
-
-            float duration = 30f; 
-            Color endScreenColor = _endScreenRenderer.color;
-            endScreenColor.a = 0f; 
-            _endScreenRenderer.color = endScreenColor;
-
-            float elapsedTime = 0f;
-            while (elapsedTime < duration)
-            {
-                elapsedTime += Time.deltaTime;
-                endScreenColor.a = Mathf.Clamp01(elapsedTime / duration); 
-                _endScreenRenderer.color = endScreenColor;
-                yield return null; 
-            }
-        }
+        SceneLoader.Instance.LoadEndScene();
 
         yield return new WaitForSeconds(delayBeforeQuit);
 

@@ -7,11 +7,17 @@ public class LoadPrevScene : MonoBehaviour
 
     public void LoadScene()
     {
-        int index = SceneManager.GetActiveScene().buildIndex - 1;
-        if (index < 0)
+        bool loaded = false;
+        int index = SceneManager.GetActiveScene().buildIndex;
+        do
         {
-            index = SceneManager.sceneCountInBuildSettings - 1;
-        }
-        SceneManager.LoadScene(index);
+            index -= 1;
+            if (index < 0)
+            {
+                index = SceneManager.sceneCountInBuildSettings - 1;
+            }
+            Debug.Log(index);
+            loaded = SceneLoader.Instance.LoadScene(index);
+        } while (!loaded);
     }
 }
