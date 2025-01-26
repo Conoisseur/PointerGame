@@ -19,7 +19,7 @@ public class ShowDialogue : MonoBehaviour
         {
             Debug.LogError("Dialogue box component not found on Dialogue Box in Start!");
         }
-        Debug.Log(_dialogueBoxWriter);
+        // Debug.Log(_dialogueBoxWriter);
     }
 
     public void ShowText()

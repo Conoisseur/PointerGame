@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: 
   dialogues:
-  - It's a chest
-  - There's a combination lock on it
-  - find the combination somewhere lol
-  dialogueIndex: 1
+  - The chest is ornately carved, its surface adorned with strange symbols. A heavy
+    lock secures the lid, the metal cold and unforgiving.
+  - You try to tug on the lock, but it doesn't budge.
+  - The chest is secured tightly, defying any attempt to open it.
+  - A cold sensation grips your hand as you touch the lock. It feels... alive.
+  dialogueIndex: 2

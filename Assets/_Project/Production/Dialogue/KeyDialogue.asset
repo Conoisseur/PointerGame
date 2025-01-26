@@ -14,9 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: 
   dialogues:
-  - It's a golden key
-  - Maybe you should pick it up?
-  - It smells of key...
-  - It might be for that big door where you started?
-  - pick up the key dumbass
-  dialogueIndex: 1
+  - You grasp the key, the cold metal feels strangely warm in your hand. /n Finally,
+    freedom is within reach.
+  dialogueIndex: 3

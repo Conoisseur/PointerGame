@@ -4,14 +4,20 @@ using UnityEngine.UI;
 
 public class LoadNextScene : MonoBehaviour
 {
-
     public void LoadScene()
     {
-        int index = SceneManager.GetActiveScene().buildIndex + 1;
-        if (index >= SceneManager.sceneCountInBuildSettings)
+        bool loaded = false;
+        int index = SceneManager.GetActiveScene().buildIndex;
+        
+        do
         {
-            index = 0;
-        }
-        SceneManager.LoadScene(index);
+            index += 1;
+            if (index >= SceneManager.sceneCountInBuildSettings)
+            {
+                index = 0;
+            }
+            // Debug.Log(index);
+            loaded = SceneLoader.Instance.LoadScene(index);
+        } while (!loaded);
     }
 }

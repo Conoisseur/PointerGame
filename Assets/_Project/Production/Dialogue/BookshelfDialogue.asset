@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Cat
   dialogues:
-  - It's some kind of shelf full of books...
-  - Some are kinda dusty
-  - How old are these?
-  - You take one out...
-  - Its title reads "A guide to League of Legends"
-  - Ew. No wonder it smells of wet damp in here
-  dialogueIndex: 0
+  - The bookshelf is filled with dusty, leather-bound books.
+  - 'You run your fingers along their spines, feeling their weight and texture. One
+    book in particular seems out of place. '
+  - 'The book is smaller than the others, its cover worn and faded. '
+  - As you open the book, it falls open to a strange script. It seems to be a translation
+    of an ancient language. [9]
+  dialogueIndex: 2

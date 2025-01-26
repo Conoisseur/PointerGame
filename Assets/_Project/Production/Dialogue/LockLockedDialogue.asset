@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogues:
   - The door is locked tight. Panic starts to set in, you need to find a way to escape.
   - The door won't budge no matter how hard you try. You really are stuck in here.
-  dialogueIndex: 1
+  dialogueIndex: 2

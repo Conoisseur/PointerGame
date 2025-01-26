@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Production/Scenes/WindowRoom.unity
     guid: 230e850352d3b06418ecc30ab06f7cf3
+  - enabled: 1
+    path: Assets/_Project/Production/Scenes/EndScene.unity
+    guid: 791d0a05782317e4dafc471f4fd63407
   m_configObjects: {}
