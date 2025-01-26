@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -66,7 +65,7 @@ public class zoomInInteractable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!_zoomEnabled)
+        if (!_zoomEnabled && IsCameraAtOriginalPosition())
         {
             StartCoroutine(ZoomInCoroutine());
         }
@@ -98,7 +97,6 @@ public class zoomInInteractable : MonoBehaviour
 
     private float CalculateTargetZoom()
     {
-        // Get the renderer bounds of the object
         Renderer renderer = GetComponent<Renderer>();
         if (renderer == null)
         {
@@ -113,11 +111,9 @@ public class zoomInInteractable : MonoBehaviour
 
         float screenAspect = (float)Screen.width / (float)Screen.height;
 
-        // Determine the zoom level required to fit the object
         float zoomForWidth = objectWidth / (2f * screenAspect);
         float zoomForHeight = objectHeight / 2f;
 
-        // Return the larger zoom level to ensure the whole object fits
         return Mathf.Max(zoomForWidth, zoomForHeight);
     }
 
@@ -144,6 +140,12 @@ public class zoomInInteractable : MonoBehaviour
 
         _camera.transform.position = targetPosition;
         _camera.orthographicSize = targetZoom;
+    }
+
+    private bool IsCameraAtOriginalPosition()
+    {
+        // Check if the camera is at its original position and zoom level
+        return _camera.transform.position == _originalCameraPosition && Mathf.Approximately(_camera.orthographicSize, _originalZoom);
     }
 
     private void OnDestroy()

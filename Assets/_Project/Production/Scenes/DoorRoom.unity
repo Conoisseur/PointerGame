@@ -307,23 +307,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1079028081 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5394446990266060610, guid: ef621239d31f8ee46b65f2de6e670149, type: 3}
-  m_PrefabInstance: {fileID: 1221945619923207049}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1079028088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079028081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dd207aede024d242bfee73a35c06149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1196695142
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,6 +869,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lock
       objectReference: {fileID: 0}
+    - target: {fileID: 7072011986214677487, guid: ef621239d31f8ee46b65f2de6e670149, type: 3}
+      propertyPath: winMessage
+      value: The key slides smoothly into the lock and turns with a satisfying click.
+        You feel freedom is within your reach...
+      objectReference: {fileID: 0}
     - target: {fileID: 8461660373618025898, guid: ef621239d31f8ee46b65f2de6e670149, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
@@ -929,10 +917,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5394446990266060610, guid: ef621239d31f8ee46b65f2de6e670149, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 1079028088}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef621239d31f8ee46b65f2de6e670149, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
