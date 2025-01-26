@@ -8,29 +8,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 272284662070000535, guid: da2626dbf27efd443867a24224ab215c, type: 3}
+      propertyPath: bypasssZoomConstraints
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2284852898429946232, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: m_Size.x
-      value: 6.661319
+      value: 6.697278
       objectReference: {fileID: 0}
     - target: {fileID: 2284852898429946232, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: m_Size.y
-      value: 12.245021
+      value: 12.388839
       objectReference: {fileID: 0}
     - target: {fileID: 2284852898429946232, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: m_Offset.x
-      value: -2.678823
+      value: -0.0001912117
       objectReference: {fileID: 0}
     - target: {fileID: 2284852898429946232, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: m_Offset.y
-      value: 0.8419452
+      value: 0.30262423
       objectReference: {fileID: 0}
     - target: {fileID: 2284852898429946232, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 38.399998
+      value: 6.99
       objectReference: {fileID: 0}
     - target: {fileID: 2284852898429946232, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 21.599998
+      value: 12.31
       objectReference: {fileID: 0}
     - target: {fileID: 3696478345197772388, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: m_Sprite
@@ -42,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: b820b90a27f6ef7429a07e5287efe0fa, type: 2}
     - target: {fileID: 5855266509820672759, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: m_Name
-      value: Key Variant
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 7994771619134410783, guid: da2626dbf27efd443867a24224ab215c, type: 3}
       propertyPath: m_LocalScale.x

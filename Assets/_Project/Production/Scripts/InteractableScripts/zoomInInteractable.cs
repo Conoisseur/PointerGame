@@ -11,6 +11,8 @@ public class zoomInInteractable : MonoBehaviour
     private float _originalZoom;
     private bool _zoomEnabled = false;
 
+    public bool bypasssZoomConstraints = false;
+
     [SerializeField] private float zoomDuration = 0.5f;
 
     private GameObject _resetButton;
@@ -65,7 +67,7 @@ public class zoomInInteractable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!_zoomEnabled && IsCameraAtOriginalPosition())
+        if (!_zoomEnabled && IsCameraAtOriginalPosition() || bypasssZoomConstraints)
         {
             StartCoroutine(ZoomInCoroutine());
         }
@@ -75,6 +77,8 @@ public class zoomInInteractable : MonoBehaviour
     {
         _resetButton.SetActive(true);
         _zoomEnabled = true;
+
+        Debug.Log("zoomin in");
 
         float elapsedTime = 0f;
 
